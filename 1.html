@@ -1,35 +1,137 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style="margin:0;">
-    <div style="background-color:#f1f1f1;
-    text-align:center;
-    padding:10px; ">
-    <img alt="NEVER" src="https://i.328888.xyz/2023/03/25/iANbz5.jpeg" ;
-    width="60px"; height="58px";>
-    </div>
-    <div style= "
-    margin:0px auto;
-padding:14px;
-font-size:45px;
-text-align:center;
-">
-<p> 有幸报国</p>
-<P> 不负少年</p>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex布局</title>
 
-<div style="
-  background-color:#f1f1f1; 
-  text-align:center; 
-  font-size:15px;
-  padding:40px;">
-    <p>版权所有：wudongzhi</p>
-    <a href = "https://wudongzhi.github.io/nh01/new.html"> 我的网站 </a>
-</div>
-</body>
+    <style>
+      body {
+        background-color: #eee;
+      }
+      .flex {
+        display: flex;
+      }
+      .column {
+        flex-direction: column;
+      }
+      .bac {
+        background-color: rgb(255, 255, 255);
+      }
+      .flex1 {
+        flex: 1;
+      }
+      .pad {
+        padding: 8px;
+      }
+      .mgr {
+        margin: 8px;
+      }
+      .mgrt {
+        margin-top: 8px;
+      }
+
+      .mgrr {
+        margin-right: 8px;
+      }
+      .yinying {
+        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
+          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
+      }
+      .daohang {
+        height: 100px;
+        text-align: center;
+        font-size: 25px;
+        border-bottom: 1px solid;
+        justify-content: center;
+      }
+      @media (max-width: 600px) {
+        .cebianlan {
+          display: none;
+        }
+        .neirong {
+          flex-direction: column;
+        }
+        .youqu {
+          margin-left: 8px;
+        }
+        .shuju {
+          margin: 0 0 8px;
+          flex: auto;
+        }
+      }
+    </style>
+  </head>
+  <body class="flex" style="height: 100vh; margin: 0; z-index: 3">
+    <!--侧边栏-->
+    <cebianlan class="flex bac yinying column cebianlan" style="width: 270px">
+      <!--头像栏-->
+      <div
+        style="
+          display: flex;
+          height: 120px;
+          justify-content: center;
+          align-items: center;
+        "
+        class="yinying column"
+      >
+        <img
+          alt="wangkuan"
+          src="https://i.328888.xyz/2023/04/08/i3dwHE.th.png"
+          width="80px"
+          ;height="80px"
+        />
+      </div>
+      <!--导航栏-->
+      <div class="flex column daohang">导航</div>
+      <div class="flex column daohang">导航</div>
+      <div class="flex column daohang">导航</div>
+    </cebianlan>
+    <!--主区域-->
+    <zhuquyu class="flex column flex1">
+      <!--标题栏-->
+      <biaoti
+        class="flex bac yinying"
+        style="height: 120px; z-index: 2"
+      ></biaoti>
+      <!--内容栏-->
+      <neirong class="flex flex1 neirong" style="overflow: auto">
+        <!--左区-->
+        <zuoqu style="flex: 3" class="flex column mgr">
+          <!--数据区-->
+          <shujuqu class="flex neirong">
+            <!--数据块-->
+            <div
+              class="shuju mgrr bac yinying flex1"
+              style="height: 100px"
+            ></div>
+            <div
+              class="shuju bac mgrr yinying flex1"
+              style="height: 100px"
+            ></div>
+            <div
+              class="shuju bac mgrr yinying flex1"
+              style="height: 100px"
+            ></div>
+            <div class="shuju bac yinying flex1" style="height: 100px"></div>
+          </shujuqu>
+          <!--列表区-->
+          <liebiao class="flex column">
+            <liebiao1 style="height: 300px" class="bac mgrt yinying"></liebiao1>
+            <liebiao2 style="height: 250px" class="bac mgrt yinying"></liebiao2>
+            <liebiao3 style="height: 250px" class="bac mgrt yinying"></liebiao3>
+            <liebiao4 style="height: 250px" class="bac mgrt yinying"></liebiao4>
+            <liebiao5 style="height: 250px" class="bac mgrt yinying"></liebiao5>
+          </liebiao>
+        </zuoqu>
+        <!--右区-->
+        <youqu style="flex: 1" class="flex column youqu mgrt mgrr">
+          <!--提示区-->
+          <tishiqu style="height: 600px" class="bac yinying"></tishiqu>
+          <!--消息区-->
+          <xiaoxiqu style="height: 700px" class="bac mgrt yinying"></xiaoxiqu>
+        </youqu>
+      </neirong>
+    </zhuquyu>
+  </body>
 </html>
